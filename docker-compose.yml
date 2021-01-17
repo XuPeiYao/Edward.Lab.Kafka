@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  edward.lab.kafkaproducer:
+    image: ${DOCKER_REGISTRY-}edwardlabkafkaproducer
+    build:
+      context: .
+      dockerfile: Edward.Lab.KafkaProducer/Dockerfile
+
+  edward.lab.kafkaconsumer:
+    image: ${DOCKER_REGISTRY-}edwardlabkafkaconsumer
+    build:
+      context: .
+      dockerfile: Edward.Lab.KafkaConsumer/Dockerfile
+
